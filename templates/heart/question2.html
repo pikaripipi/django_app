@@ -1,0 +1,22 @@
+{% extends 'heart/layout.html' %}
+
+{% block title %}みんなのきもち{% endblock %}
+
+{% block header %}
+
+<h1 class="display-4 text-primary">もんだい</h1>
+<p>みんなでたのしくはなしてたら、かえるくんがひとりで
+    こっちをみてたよ。きみならどうする？</p>
+
+<img src=".png">
+
+<p>きみのこたえをえらんでね<br>
+    <input type="checkbox" name="question" value="question1_1">1.そのままみんなとはなしつづける<br>
+    <input type="checkbox" name="question" value="question1_2.">2.かえるくんもいっしょにはなそう！とはなしかける<br>
+    <input type="checkbox" name="question" value="question1_3.">3.みないで！とおこる<br>
+</p>
+<p><input type="submit" onclick="location.href='question2.html'"value="けってい"></p>
+</form>
+
+
+{% endblock %}

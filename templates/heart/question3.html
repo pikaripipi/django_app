@@ -1,0 +1,35 @@
+みんなでおにごっこをしていたら、きみはまちがえてうさぎちゃんを
+おもいっきりたたいてしまいました。うさぎちゃんはいたそうにしています。
+きみはこのあとどうする？<br>
+
+1わざとじゃないからしょうがない。おにごっこをつづける<br>
+2そのくらいでなくなよ!ともんくをいう<br>
+3だいじょうぶ？ごめんね。とあやまる。<br>
+<br>
+
+
+<br>
+きみはうさぎちゃんのことがすきです。はなしたくてあることをしました。
+なにをした？<br>
+1おい!といってたたく<br>
+2うさぎさん～とはなしかける<br>
+3ころんだふりをしてしんぱいしてもらう<br>
+<br>
+じゅぎょうをうけてたら、となりのともだちが
+じゅぎょうにかんけいないはなしをしてきたよ。<br>
+
+1むしする<br>
+2いっしょにしゃべる<br>
+3あとではなそう!という<br>
+<br>
+
+<div>
+    <form action="{% url 'question1' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}<br>
+        <label><input type="radio" name="radio" class="radio" value="question1_1">{{q1}}</label><br>
+        <label><input type="radio" name="radio" class="radio" value="question1_2">チェック2</label><br>
+        <label><input type="radio" name="radio" class="radio" value="question1_3">チェック3</label><br>
+        <input type="submit" name="button" value="けってい">
+        <button onclick="location.href='question2.html'">次</button>
+    </form>
+</div>

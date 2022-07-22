@@ -1,0 +1,32 @@
+{% extends 'heart/layout.html' %}
+
+{% block title %}みんなのきもち{% endblock %}
+
+{% block header %}
+
+
+<div class="mondai">
+<h1 style="background: url(banner.png);">もんだい</h1>
+</div>
+
+<body class="container">
+    <p>{{x|safe}}</p>
+    <form action="{% url 'index' %}" method="post">
+        {% carf_token %}
+        {{form.as_p}
+
+
+    <p>きみのうさぎちゃんクラスにカエルくんが転校してきました。<br>
+    みためもぜんぜんちがいます。きみはなんてはなしかける？</p>
+
+    1.へんなはだのいろしてるね～とはなしかける<br>
+    2.かっこいいね!とほめる<br>
+    3.みためは関係ない!いっしょにおしゃべりする<br>
+
+
+    <img src="alone.png">
+
+    </form>
+</body>
+
+{% endblock %}

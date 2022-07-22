@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    crossorigin="anonymous">
+</head>
+<body class="container">
+    <h1 class="display-4 text-primary">
+        {{title}}</h1>
+        
+    <p>{{ qs }}</p>
+
+
+        <table class="table">
+            <ol>
+                <tr>
+                    <li><input type='radio' name='qes1'>1.{{q.q1}}</li>
+                </tr>
+                <tr>
+                    <li><input type='radio' name='qes2'>2.{{q.q2}}</li>
+                </tr>
+                <tr>    
+                    <li><input type='radio' name='qes3'>3.{{q.q3}}</li>
+                </tr>
+            </ol>
+        <tr><td>
+
+        <form action="{% url 'question' id %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+                <input type="submit" value="つぎのもんだい"class="btn btn-primary mt-2">
+
+        </table>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}みんなのきもち{% endblock %}</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand navbar-light"style="background-color:#ffa500">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">top</a>
+        </li>
+    </ul>
+    </nav>
+
+    <p>{{x|safe}}</p>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}
+        <input type="submit" class="btn btn-primary mt-2"
+            value="つぎのもんだい">
+    
+
+
+
+
+
+    <hr>
+    <div class="my-3">
+        <span class="font-weight-bold">
+    </div>
+</body>
+</html> -->
